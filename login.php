@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ]);
 
             // ไม่ echo อะไรออกไปก่อน header
-            header("Location: error.html");
+            header("Location: eror.html");
             exit();
 
         } catch (Exception $e) {
